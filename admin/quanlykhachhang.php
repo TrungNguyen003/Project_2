@@ -30,45 +30,53 @@
 
       <!-- Sidebar -->
       <aside id="sidebar">
-        <div class="sidebar-title">
+         <div class="sidebar-title">
           <div class="sidebar-brand">
-          Manager Pet.
+            <span></span></span> Manager Pet.
           </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
 
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
             <a href="bangdieukhien.php">
+            <i class="fa-solid fa-table-columns"></i> &nbsp;
                 Bảng điền khiển
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-brands fa-shopify"></i> &nbsp;
                Tạo đơn mới
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#">
+            <a href="quanlydichvu.php">
+            <i class="fa-solid fa-list-check"></i> &nbsp;
               Quản lý dịch vụ
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-solid fa-users"></i> &nbsp;
               Quản lý khách hàng
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="quanlyhanghoa.php">
+            <i class="fa-solid fa-table-cells"></i> &nbsp;
                 Quản lý hàng hóa
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-solid fa-chart-simple"></i> &nbsp;
                 Doanh thu
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-solid fa-person-skating"></i> &nbsp;
                 Đăng xuất
             </a>
           </li>

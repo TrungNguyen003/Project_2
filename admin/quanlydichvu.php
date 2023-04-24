@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="quanlydichvu.php">
+            <a href="#">
             <i class="fa-solid fa-list-check"></i> &nbsp;
               Quản lý dịch vụ
             </a>
@@ -86,25 +86,6 @@
 
       <!-- Main -->
       <main class="main-container">
-        <div class="main-title">
-          <h2>Quản lý hàng</h2>
-        </div>
-        <div class="main-cards">
-         <a class="card" href="hehe.html">
-            <div class="card-inner">
-               <h2>Quản lý sản phẩm</h2>
-             
-            </div>
-            <h1>bla bla</h1>
-         </a>
-
-        <a class="card" href="">
-            <div class="card-inner">
-              <h2>Thêm sản phẩm</h2>
-            </div>
-            <h1>bla bla</h1> 
-        </a>
-        </div>
       </main>
     </div>
     <script src="assets/js/scripts.js"></script>

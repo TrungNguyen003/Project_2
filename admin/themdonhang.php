@@ -6,6 +6,7 @@
     <title>Admin Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/qlhh.css">
@@ -51,7 +52,7 @@
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="quanlydichvu.php">
+            <a href="#">
             <i class="fa-solid fa-list-check"></i> &nbsp;
               Quản lý dịch vụ
             </a>
@@ -86,25 +87,59 @@
 
       <!-- Main -->
       <main class="main-container">
-        <div class="main-title">
-          <h2>Quản lý hàng</h2>
-        </div>
-        <div class="main-cards">
-         <a class="card" href="hehe.html">
-            <div class="card-inner">
-               <h2>Quản lý sản phẩm</h2>
-             
-            </div>
-            <h1>bla bla</h1>
-         </a>
+      <div class="container" ng-app="myBag" ng-controller="bagController" ng-init="fetchPro(); fetchCart();">
+			<br />
+			<h3 align="center">Trang bán hàng</h3>
+			<br />
+			<div class="row">
+			<div class="col-md-6">
+			<h3 align="center">Mặt hàng</h3>
+			<form method="post">
+				<div class="row">
+					<div class="col-md-6" ng-repeat = "product in products">
+						<div class="products">
+							<img ng-src="images/{{product.pro_image}}" class="img-fluid" style="width:auto; height:150px;" /><br />
+							<h5 class="text-info"></h5>
+							<h6></h6>
+							<button type="button" name="add_to_cart" class="btn btn-info form-control" ng-click="add_to_bag(product)" > Add to Bag</button>
+							
+						</div>
+					</div>
+				</div>
+			</form>
 
-        <a class="card" href="">
-            <div class="card-inner">
-              <h2>Thêm sản phẩm</h2>
-            </div>
-            <h1>bla bla</h1> 
-        </a>
-        </div>
+			</div>
+			<div class="col-md-6">
+
+			<h3 align="center">Đơn hàng</h3>
+			<div class="table-responsive">
+				<table class="table table-bordered">
+					<tr>  
+						<th width="40%">Tên hàng</th>  
+						<th width="10%">Số lượng</th>  
+						<th width="20%">Giá</th>  
+						<th width="15%">Tổng cộng</th>  
+						<th width="5%">Hoạt động</th>  
+					</tr>
+					<tr ng-repeat = "cart in carts">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><button type="button" class="btn btn-danger btn-xs" ng-click="delete_pro(cart.p_id)">X</button></td>
+					</tr>
+					<tr>
+						<td colspan="3" align="right">Total</td>
+						<td colspan="2"></td>
+					</tr>
+				</table>
+				<button type="button" class="btn btn-success form-control" > Checkout</button>
+			</div>
+			</div>
+
+			</div>
+
+		</div>
       </main>
     </div>
     <script src="assets/js/scripts.js"></script>

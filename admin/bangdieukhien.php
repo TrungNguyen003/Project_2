@@ -30,53 +30,54 @@
 
       <!-- Sidebar -->
       <aside id="sidebar">
-        <div class="sidebar-title">
+      <div class="sidebar-title">
           <div class="sidebar-brand">
-          Manager Pet.
+            <span></span></span> Manager Pet.
           </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
 
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
             <a href="bangdieukhien.php">
+            <i class="fa-solid fa-table-columns"></i> &nbsp;
                 Bảng điền khiển
-                <i class="fa-solid fa-table-columns"></i>
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-brands fa-shopify"></i> &nbsp;
                Tạo đơn mới
-               <i class="fa-brands fa-shopify"></i>
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#">
+            <a href="quanlydichvu.php">
+            <i class="fa-solid fa-list-check"></i> &nbsp;
               Quản lý dịch vụ
-              <i class="fa-solid fa-list-check"></i>
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="quanlykhachhang.php">
+            <i class="fa-solid fa-users"></i> &nbsp;
               Quản lý khách hàng
-              <i class="fa-solid fa-users"></i>
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="quanlyhanghoa.php">
+            <i class="fa-solid fa-table-cells"></i> &nbsp;
                 Quản lý hàng hóa
-                <i class="fa-solid fa-table-cells"></i>
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-solid fa-chart-simple"></i> &nbsp;
                 Doanh thu
-                <i class="fa-solid fa-chart-simple"></i>
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#">
+            <i class="fa-solid fa-person-skating"></i> &nbsp;
                 Đăng xuất
-                <i class="fa-solid fa-person-skating"></i>
             </a>
           </li>
         </ul>
@@ -89,7 +90,7 @@
           <h2>DASHBOARD</h2>
         </div>
         <div class="main-cards">
-         <a class="card" href="hehe.html">
+         <a class="card" href="themdonhang.php">
             <div class="card-inner">
                <h2>Thêm đơn hàng</h2>
                <i class="fa-brands fa-shopify fa-3x"></i>
