@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(247, 246, 252);
+  background-color: rgb(245, 245, 245);
   color: rgb(70, 71, 81);
-  font-family: 'Galindo', cursive ;
+  font-family: 'Convergence', cursive ;
 }
 
 .material-icons-outlined {
@@ -84,8 +84,8 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: #161616d9;
-  color: rgb(255, 255, 255);
+  background-color: #A6D0DD;
+  color: #D98129;
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -107,11 +107,18 @@ body {
   margin-top: 15px;
   font-size: 30px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.793);
-}
+  color: #DC5F00;
 
+}
+.active{
+  background-color: #ffff;
+  border-radius: 10px;
+}
 .sidebar-brand > .material-icons-outlined {
   font-size: 50px;
+}
+#sidebar-list-item{
+  background-color: #D98129;
 }
 
 .sidebar-list {
@@ -121,8 +128,9 @@ body {
 }
 
 .sidebar-list-item {
-  padding: 20px 20px 20px 20px;
-  font-size: 18px;
+  margin: 10px 20px;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .sidebar-list-item:hover {
@@ -132,7 +140,7 @@ body {
 
 .sidebar-list-item > a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.94);
+  color: #363836;
 }
 
 .sidebar-responsive {

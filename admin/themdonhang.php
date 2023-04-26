@@ -41,11 +41,11 @@
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
             <a href="bangdieukhien.php">
-            <i class="fa-solid fa-table-columns"></i> &nbsp;
+            <i class="fa-solid fa-table-columns "></i> &nbsp;
                 Bảng điền khiển
             </a>
           </li>
-          <li class="sidebar-list-item">
+          <li class="sidebar-list-item active">
             <a href="#">
             <i class="fa-brands fa-shopify"></i> &nbsp;
                Tạo đơn mới

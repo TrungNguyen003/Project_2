@@ -62,7 +62,7 @@
               Quản lý khách hàng
             </a>
           </li>
-          <li class="sidebar-list-item">
+          <li class="sidebar-list-item active">
             <a href="quanlyhanghoa.php">
             <i class="fa-solid fa-table-cells"></i> &nbsp;
                 Quản lý hàng hóa

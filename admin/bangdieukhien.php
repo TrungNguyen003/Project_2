@@ -6,9 +6,17 @@
     <title>Admin Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+  
+      <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+      $(document).ready(function(){
+    $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+    });
+});
+    </script>
   </head>
   <body>
     <div class="grid-container">
@@ -38,7 +46,7 @@
         </div>
 
         <ul class="sidebar-list">
-          <li class="sidebar-list-item">
+          <li class="sidebar-list-item active">
             <a href="bangdieukhien.php">
             <i class="fa-solid fa-table-columns"></i> &nbsp;
                 Bảng điền khiển

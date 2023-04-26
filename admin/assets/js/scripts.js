@@ -16,3 +16,4 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
