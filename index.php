@@ -1,6 +1,37 @@
+<?php
+session_start();
+error_reporting(0);
+include('includes/ketnoi.php');
+if ($_SESSION['login'] != '') {
+    $_SESSION['login'] = '';
+}   
+if (isset($_POST['login'])) {
+
+    $email = $_POST['emailid'];
+    $password = md5($_POST['password']);
+    $sql = "SELECT EmailId,Password,IDNguoiDung,TrangThai FROM nguoidung WHERE EmailId=:email and Password=:password";
+    $query = $dbh->prepare($sql); //Chuẩn bị một câu lệnh để thực thi và trả về một đối tượng câu lệnh
+    $query->bindParam(':email', $email, PDO::PARAM_STR);  //Liên kết một tham số với tên biến đã chỉ định, liệt kê tham số theo biến đã chỉ định
+    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_OBJ); //Chỉ định rằng phương thức tìm nạp sẽ trả về mỗi hàng dưới dạng một đối tượng có tên thuộc tính tương ứng với tên cột được trả về trong tập hợp kết quả.
+    if ($query->rowCount() > 0) {  //rowcount Trả về số hàng bị ảnh hưởng bởi câu lệnh SQL cuối cùng
+        foreach ($results as $result) {
+            $_SESSION['id'] = $result->IDNguoiDung;
+            if ($result->TrangThai == 1) {
+                $_SESSION['login'] = $_POST['emailid'];
+                echo "<script type='text/javascript'> document.location ='mainshop.php'; </script>";
+            } else {
+                echo "<script>alert('Tài khoản của bạn đã bị chặn. Vui lòng liên hệ với quản trị viên');</script>";
+            }
+        }
+    } else {
+        echo "<script>alert('Tài khoản hoặc mật khẩu không hợp lệ!');</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,15 +68,15 @@
     <div class="form-login">
       <div class="grid">
         <h2><i class="fa-solid fa-user fa-5x"></i><h2>L &nbsp; O &nbsp; G &nbsp; I &nbsp; N</h2></h2>
-        <form action="login.php" method="POST" class="form login">
+        <form  method="POST" class="form login">
           <div class="form__field">
             <label for="login__username">
               <svg class="icon">
                 <use xlink:href="#icon-user"></use>
               </svg><span class="hidden">Username</span>
             </label>
-            <input autocomplete="username" id="login__username" type="text" name="username" class="form__input"
-              placeholder="Username" required>
+            <input autocomplete="emailid" id="login__username" type="text" name="emailid" class="form__input"
+              placeholder="emailid" required>
           </div>
 
           <div class="form__field">
@@ -58,7 +89,7 @@
               required>
           </div>
 
-          <button class="loginn" type="submit" name="submit">DANG NHAP</button>
+          <button class="loginn" type="login" name="login">DANG NHAP</button>
         </form>
         <div class="container" style="background-color:#f1f1f1">
           <button class="cancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
