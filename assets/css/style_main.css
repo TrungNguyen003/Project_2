@@ -1,3 +1,111 @@
-.content{
-    display: flex;
+.main-content{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220215/pngtree-very-simple-wind-cat-cat-dog-pet-cat-food-dog-food-image_926194.jpg");
 }
+
+#banner {
+    background-image :url("https://png.pngtree.com/background/20210711/original/pngtree-cartoon-hand-drawn-minimalist-cute-pet-taobao-poster-background-picture-image_1121867.jpg" );
+    height: 300px;
+    margin-top:40px;
+    display: flex;
+    position:relative;
+}
+
+#banner .box-left ,#banner .box-right {
+    width: 50%;
+}
+#banner  .box-left{
+    text-align: center;
+}
+#banner  .box-left h2 {
+    color: #ee5d94;
+}
+
+#banner .box-left p {
+    color: #ee5d94;
+}
+
+#banner .box-left button {
+    width: 191px;
+    height: 40px;
+    margin-top: 20px;
+    background: #ee5d94;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition:0.4s;
+    box-shadow: 3px 3px 4px rgba(0,0,0.25);
+}
+
+#banner .box-left button:hover {
+    background:orange;
+}
+
+#banner .box-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner .box-right img{
+    width: 40%;
+    height: 50%;
+    border-radius: 100px;
+    box-shadow: 3px 3px 4px rgba(0,0,0.25);
+}
+#banner .box-right img {
+    margin:0px 10px;
+    animation :animation 3s infinite linear; 
+}
+
+
+#banner .box-right img:nth-child(1)
+{
+    animation-delay: 0.5s;
+}
+#banner .box-right img:nth-child(2)
+{
+    
+    animation-delay: 1s;
+}
+
+@keyframes animation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+  @media only screen and (max-width: 500px) {
+    #banner .box-right img{
+        width: 40%;
+        height: 10%;
+        border-radius: 100px;
+        box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    #banner .box-right img{
+        width: 40%;
+        height: 20%;
+        border-radius: 100px;
+        box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    }
+  }
+  
+  @media only screen and (max-width: 300px) {
+    #banner .box-right img{
+        width: 20%;
+        height: 7%;
+        border-radius: 100px;
+        box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    }
+  }
+  
