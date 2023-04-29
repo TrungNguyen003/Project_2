@@ -85,8 +85,7 @@ if (isset($_POST['login'])) {
                 <use xlink:href="#icon-lock"></use>
               </svg><span class="hidden">Password</span>
             </label>
-            <input id="login__password" type="password" name="password" class="form__input" placeholder="Password"
-              required>
+            <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
           </div>
 
           <button class="loginn" type="login" name="login">DANG NHAP</button>
