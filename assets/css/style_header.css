@@ -15,7 +15,6 @@ body {
     background-color: #ffff;
   }
 
- 
   .menu{
     display: flex;
     justify-content: center;
@@ -33,6 +32,8 @@ body {
     text-decoration: none;
   }
     .header .logo {
+    font-family: 'Galindo';
+    color: #ee5d94;
     display: block;
     float: left;
     margin-left: 50px;

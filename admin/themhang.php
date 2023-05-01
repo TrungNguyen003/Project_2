@@ -32,10 +32,10 @@ if (strlen($_SESSION['alogin']) == 0) {
             $lastInsertId = $dbh->lastInsertId();
             if ($lastInsertId) {
                 echo "<script>alert('Thêm sách thành công');</script>";
-                echo "<script>window.location.href='quanlysach.php'</script>";
+                echo "<script>window.location.href='quanlyhanghoa.php'</script>";
             } else {
                 echo "<script>alert('Đã xảy ra sự cố. Vui lòng thử lại');</script>";
-                echo "<script>window.location.href='quanlysach.php'</script>";
+                echo "<script>window.location.href='quanlyhanghoa.php'</script>";
             }
         }
     }

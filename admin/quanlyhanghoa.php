@@ -12,7 +12,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->execute();
         $_SESSION['delmsg'] = "Đã xóa danh mục thành công ";
-        header('location:quanlysach.php');
+        header('location:quanlyhanghoa.php');
     }
 ?>
 
@@ -142,7 +142,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <tr class="odd gradeX">
                                                         <td class="center"><?php echo htmlentities($cnt); ?></td>
                                                         <td class="center" width="300">
-                                                            <img src="imgsach/<?php echo htmlentities($result->HinhSach); ?>" width="100">
+                                                            <img src="img/<?php echo htmlentities($result->HinhSach); ?>" width="100">
                                                             <br /><b><?php echo htmlentities($result->TenSach); ?></b>
                                                         </td>
                                                         <td class="center"><?php echo htmlentities($result->TenTheLoai); ?></td>
@@ -152,7 +152,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                         <td class="center">
 
                                                             <a href="suasach.php?idsach=<?php echo htmlentities($result->idsach); ?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Edit</button>
-                                                                <a href="quanlysach.php?del=<?php echo htmlentities($result->idsach); ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?');" >  <button class=" btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
+                                                                <a href="quanlyhanghoa.php?del=<?php echo htmlentities($result->idsach); ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?');" >  <button class=" btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
                                                         </td>
                                                     </tr>
                                             <?php $cnt = $cnt + 1;

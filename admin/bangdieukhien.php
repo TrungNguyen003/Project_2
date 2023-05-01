@@ -136,7 +136,7 @@
           <h2>Quản lý hàng</h2>
         </div>
         <div class="main-cards">
-         <a class="card" href="hehe.html">
+         <a class="card" href="quanlyhanghoa.php">
             <div class="card-inner">
                <h2>Quản lý sản phẩm</h2>
              

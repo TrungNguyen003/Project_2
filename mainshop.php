@@ -13,8 +13,7 @@ if (strlen($_SESSION['login']) == 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.css" rel="stylesheet" /> 
+    <link href="assets/css/bootstrap.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="assets/css/style_header.css" rel="stylesheet" />
     <link href="assets/css/style_main.css" rel="stylesheet" />
@@ -50,12 +49,6 @@ if (strlen($_SESSION['login']) == 0) {
       </div>
       <div class="to-bottom">
       </div>
-      <div class="prd-search">
-      <form id="product-search" action="" method="GET">
-        <input class="search" type="text" value="" name="name" placeholder="Tìm kiếm" required>
-        <button type="submit" value=""><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-    </div>
       <div class="category">
         <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="line">|</a> &nbsp;&nbsp;&nbsp;<a href="#">Danh mục sản phẩm<a></h5>
       </div>
@@ -64,10 +57,8 @@ if (strlen($_SESSION['login']) == 0) {
           <div class="container">
             <div class="row pad-botm">
               <div class="col-md-12">
-                <h4 class="header-line">Sản Phẩm mới</h4>
+                <h4 class="header-line">Sản Phẩm nổi bật</h4>
               </div>
-
-
               <div class="row">
                 <div class="col-md-12">
                   <!-- Advanced Tables -->
@@ -81,17 +72,21 @@ if (strlen($_SESSION['login']) == 0) {
                       if ($query->rowCount() > 0) {
                         foreach ($results as $result) {               ?>
                           <div class="col-md-3" style="float:left; height:300px;">
-                            <img src="admin/img/<?php echo htmlentities($result->HinhSach); ?>" width="150">
+                         
+                            <figure class="snip1205">
+                               <img src="admin/img/<?php echo htmlentities($result->HinhSach); ?>" width="200">
+                            <a class="mua" href="#cc">Mua</a>                              
                             <br /><b><?php echo htmlentities($result->TenSach); ?></b><br />
                             <?php echo htmlentities($result->TenTheLoai); ?><br />
                             <?php echo htmlentities($result->TenTacGia); ?><br />
                             <?php echo htmlentities($result->MaSach); ?><br />
                             <?php echo htmlentities($result->GiaSach); ?><br />
+                            </figure>
                           </div>
-
                       <?php $cnt = $cnt + 1;
                         }
                       } ?>
+                       
                     </div>
                   </div>
                 </div>
