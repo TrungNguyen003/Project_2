@@ -98,6 +98,7 @@
           <h2>DASHBOARD</h2>
         </div>
         <div class="main-cards">
+
          <a class="card" href="themdonhang.php">
             <div class="card-inner">
                <h2>Thêm đơn hàng</h2>
@@ -130,6 +131,52 @@
             </div>
               <h1>bla bla</h1>
           </a>
+        </div>
+        <div class="main-title">
+          <h2>Quản lý hàng</h2>
+        </div>
+        <div class="main-cards">
+         <a class="card" href="hehe.html">
+            <div class="card-inner">
+               <h2>Quản lý sản phẩm</h2>
+             
+            </div>
+            <h1>bla bla</h1>
+         </a>
+
+        <a class="card" href="themhang.php">
+            <div class="card-inner">
+              <h2>Thêm sản phẩm</h2>
+            </div>
+            <h1>bla bla</h1> 
+        </a>
+        <a class="card" href="">
+            <div class="card-inner">
+              <h2>Thêm thể loại</h2>
+              <i class="fa-solid fa-scroll fa-3x"></i>
+            </div>
+            <h1>bla bla</h1>
+          
+        </a>
+        </div>
+        <div class="main-title">
+          <h2>Quản lý khách hàng</h2>
+        </div>
+        <div class="main-cards">
+         <a class="card" href="hehe.html">
+            <div class="card-inner">
+               <h2>Quản lý khách hàng</h2>
+             
+            </div>
+            <h1>bla bla</h1>
+         </a>
+
+        <a class="card" href="">
+            <div class="card-inner">
+              <h2>Đăng kí thành viên</h2>
+            </div>
+            <h1>bla bla</h1>      
+        </a>
         </div>
       </main>
     </div>

@@ -50,6 +50,12 @@ if (strlen($_SESSION['login']) == 0) {
       </div>
       <div class="to-bottom">
       </div>
+      <div class="prd-search">
+      <form id="product-search" action="" method="GET">
+        <input class="search" type="text" value="" name="name" placeholder="Tìm kiếm" required>
+        <button type="submit" value=""><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
       <div class="category">
         <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="line">|</a> &nbsp;&nbsp;&nbsp;<a href="#">Danh mục sản phẩm<a></h5>
       </div>
@@ -75,7 +81,7 @@ if (strlen($_SESSION['login']) == 0) {
                       if ($query->rowCount() > 0) {
                         foreach ($results as $result) {               ?>
                           <div class="col-md-3" style="float:left; height:300px;">
-                            <img src="admin/imgsach/<?php echo htmlentities($result->HinhSach); ?>" width="150">
+                            <img src="admin/img/<?php echo htmlentities($result->HinhSach); ?>" width="150">
                             <br /><b><?php echo htmlentities($result->TenSach); ?></b><br />
                             <?php echo htmlentities($result->TenTheLoai); ?><br />
                             <?php echo htmlentities($result->TenTacGia); ?><br />

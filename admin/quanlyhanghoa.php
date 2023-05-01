@@ -1,3 +1,21 @@
+<?php
+session_start();
+error_reporting(0);
+include('includes/ketnoi.php');
+if (strlen($_SESSION['alogin']) == 0) {
+    header('location:index.php');
+} else {
+    if (isset($_GET['del'])) {
+        $id = $_GET['del'];
+        $sql = "delete from sach  WHERE id=:id";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':id', $id, PDO::PARAM_STR);
+        $query->execute();
+        $_SESSION['delmsg'] = "Đã xóa danh mục thành công ";
+        header('location:quanlysach.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -86,27 +104,72 @@
 
       <!-- Main -->
       <main class="main-container">
-        <div class="main-title">
-          <h2>Quản lý hàng</h2>
-        </div>
-        <div class="main-cards">
-         <a class="card" href="hehe.html">
-            <div class="card-inner">
-               <h2>Quản lý sản phẩm</h2>
-             
-            </div>
-            <h1>bla bla</h1>
-         </a>
+      <div class="content-wrapper">
+            <div class="container">
+                <div class="row pad-botm">
+                    <div class="col-md-12">
+                        <h4 class="header-line">Quản lý sách</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                            Danh sách sách
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Tên sách</th>
+                                                <th>Loại</th>
+                                                <th>Tác giả</th>
+                                                <th>Mã Sách</th>
+                                                <th>Giá Mượn</th>
+                                                <th>Chỉnh Sửa</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $sql = "SELECT sach.TenSach,theloai.TenTheLoai,tacgia.TenTacGia,sach.MaSach,sach.GiaSach,sach.id as idsach,sach.HinhSach from  sach join theloai on theloai.id=sach.CatId join tacgia on tacgia.id=sach.IDTacGia";
+                                            $query = $dbh->prepare($sql);
+                                            $query->execute();
+                                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                            $cnt = 1;
+                                            if ($query->rowCount() > 0) {
+                                                foreach ($results as $result) {               ?>
+                                                    <tr class="odd gradeX">
+                                                        <td class="center"><?php echo htmlentities($cnt); ?></td>
+                                                        <td class="center" width="300">
+                                                            <img src="imgsach/<?php echo htmlentities($result->HinhSach); ?>" width="100">
+                                                            <br /><b><?php echo htmlentities($result->TenSach); ?></b>
+                                                        </td>
+                                                        <td class="center"><?php echo htmlentities($result->TenTheLoai); ?></td>
+                                                        <td class="center"><?php echo htmlentities($result->TenTacGia); ?></td>
+                                                        <td class="center"><?php echo htmlentities($result->MaSach); ?></td>
+                                                        <td class="center"><?php echo htmlentities($result->GiaSach); ?></td>
+                                                        <td class="center">
 
-        <a class="card" href="">
-            <div class="card-inner">
-              <h2>Thêm sản phẩm</h2>
+                                                            <a href="suasach.php?idsach=<?php echo htmlentities($result->idsach); ?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Edit</button>
+                                                                <a href="quanlysach.php?del=<?php echo htmlentities($result->idsach); ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?');" >  <button class=" btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
+                                                        </td>
+                                                    </tr>
+                                            <?php $cnt = $cnt + 1;
+                                                }
+                                            } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1>bla bla</h1> 
-        </a>
         </div>
       </main>
     </div>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>
+<?php } ?>

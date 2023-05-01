@@ -86,25 +86,7 @@
 
       <!-- Main -->
       <main class="main-container">
-        <div class="main-title">
-          <h2>Quản lý khách hàng</h2>
-        </div>
-        <div class="main-cards">
-         <a class="card" href="hehe.html">
-            <div class="card-inner">
-               <h2>Quản lý khách hàng</h2>
-             
-            </div>
-            <h1>bla bla</h1>
-         </a>
-
-        <a class="card" href="">
-            <div class="card-inner">
-              <h2>Đăng kí thành viên</h2>
-            </div>
-            <h1>bla bla</h1>      
-        </a>
-        </div>
+        
       </main>
     </div>
     <script src="assets/js/scripts.js"></script>
