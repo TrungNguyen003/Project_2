@@ -1,20 +1,22 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/ketnoi.php');
-
+include('publish/ketnoi.php');
 if (isset($_POST['login'])) {
     $TenNguoiDung = $_POST['TenNguoiDung'];
     $password = md5($_POST['password']);
-    $sql = "SELECT TenNguoiDung,Password FROM admin WHERE TenNguoiDung=:TenNguoiDung and Password=:password";
+    $sql = "SELECT TenNguoiDung,IDNguoiDung,Password FROM admin WHERE TenNguoiDung=:TenNguoiDung and Password=:password";
     $query = $dbh->prepare($sql); //chuan bi 
     $query->bindParam(':TenNguoiDung', $TenNguoiDung, PDO::PARAM_STR);
     $query->bindParam(':password', $password, PDO::PARAM_STR);
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ); //Chỉ định rằng phương thức tìm nạp sẽ trả về mỗi hàng dưới dạng một đối tượng có tên thuộc tính tương ứng với tên cột được trả về trong tập hợp kết quả.
     if ($query->rowCount() > 0) {
+        foreach ($results as $result) {
+            $_SESSION['idad'] = $result->IDNguoiDung;
         $_SESSION['alogin'] = $_POST['TenNguoiDung'];
-        echo "<script type='text/javascript'> document.location ='admin/bangdieukhien.php'; </script>";
+        echo "<script type='text/javascript'> document.location ='view/bangdieukhien_ad_view.php'; </script>";
+    }
     } else {
         echo "<script>alert('Tài khoản hoặc mật khẩu không hợp lệ!');</script>";
     }
@@ -27,7 +29,7 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/bootstrap.css" rel="stylesheet" /> 
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/loginad.css" rel="stylesheet" />
     <title>Document</title>
 </head>

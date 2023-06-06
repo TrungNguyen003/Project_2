@@ -1,12 +1,11 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/ketnoi.php');
+include('publish/ketnoi.php');
 if ($_SESSION['login'] != '') {
     $_SESSION['login'] = '';
 }   
 if (isset($_POST['login'])) {
-
     $email = $_POST['emailid'];
     $password = md5($_POST['password']);
     $sql = "SELECT EmailId,Password,IDNguoiDung,TrangThai FROM nguoidung WHERE EmailId=:email and Password=:password";
@@ -36,38 +35,60 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/style_index.css" rel="stylesheet" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <title>🐶</title>
-</head>
 
+
+</head>
 <body>
-    <?php include('includes/header.php'); ?>
-    <main>&nbsp</main>
-        <div class="content-left">
-            <h1>
-                Open <br> the menu to <br> see more pets
-            </h1>
+    <div class="background">
+    <header>
+        <a href="#" class="logo"><h2>Pet<i class="fa-solid fa-paw"></i></h2></a>
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact</a></li>          
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <section class="hero">  
+        <div class="hero-text">
+            <h1> Open <br> the menu to <br> see more pets</h1>
             <p> Một chú chó không nhất thiết phải là cả cuộc đời bạn nhưng <br>chúng có thể khiến cuộc sống của bạn thêm màu sắc và toàn diện hơn.</p>
+            <a href="#">...</a>
+            <a href="#" class="ctaa"  onclick="document.getElementById('id01').style.display='block'"><i class="ri-play-fill"></i>Xem thêm</a>
         </div>
-        <div class="content-min"></div>
-        <div class="content-right">
-            <img id="anh1" src="assets/img/unnamed.jpg">
-            <img id="anh2" src="assets/img/341751645_3419254721632567_2835827517458195052_n.png">
+        <div class="hero-img">
+            <img src="png/efffect_hero.png" width="100%">
+
         </div>
-    <div class="button-move">
-            <button class="btn btn-info" onclick="document.getElementById('id01').style.display='block'">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <h3>Shop &nbsp <i class="fa-solid fa-arrow-right"></i></h3>
-            </button>
+    </section>
+    <div class="iconss">  
+        <i class="ri-facebook-line"></i>
+        <i class="ri-mail-line"></i>
+        <i class="ri-instagram-line"></i>
     </div>
-    <div id="id01" class="modal">
+    <div class="effect-icons">
+        <img src="png/effcect1.png">
+        <img src="png/icon-effect.png">
+        <img src="png/effcect1.png">
+        <img src="png/icon-effect.png">   
+        <img src="png/effcect1.png">
+        <img src="png/effect3.png">
+                
+    </div>
+</div>
+<div id="id01" class="modal">
     <div class="form-login">
       <div class="grid">
-        <h2><i class="fa-solid fa-user fa-5x"></i><h2>L &nbsp; O &nbsp; G &nbsp; I &nbsp; N</h2></h2>
+        <div class="user-login">
+          <h1>Login</h1>
+        </div>
         <form  method="POST" class="form login">
           <div class="form__field">
             <label for="login__username">
@@ -78,7 +99,6 @@ if (isset($_POST['login'])) {
             <input autocomplete="emailid" id="login__username" type="text" name="emailid" class="form__input"
               placeholder="emailid" required>
           </div>
-
           <div class="form__field">
             <label for="login__password">
               <svg class="icon">
@@ -87,11 +107,15 @@ if (isset($_POST['login'])) {
             </label>
             <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
           </div>
-
-          <button class="loginn" type="login" name="login">DANG NHAP</button>
+         <div class="loginn">
+          <button  type="login" name="login"> <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Đăng nhập</button> <a class="reg" href="dangki.php">Not a member?</a>
+         </div>
         </form>
-        <div class="container" style="background-color:#f1f1f1">
-          <button class="cancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <div class="container">
+          <button class="cancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><i class="ri-arrow-left-line"></i>Thoát</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </div>
@@ -113,15 +137,17 @@ if (isset($_POST['login'])) {
     </symbol>
   </svg>
 </body>
-<script>
-    // Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+<script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/script/script.js"></script>
+    <script>
+        // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
-}
-</script>
+    </script>   
 </html>

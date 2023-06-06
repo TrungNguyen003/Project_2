@@ -1,3 +1,5 @@
+
+//menu active 
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -14,7 +16,6 @@ function myFunction() {
 $(document).on('click','ul li',function(){
   $(this).addClass('active').siblings().removeClass('active')
 });
-
 
 
 let slideIndex = 0;
@@ -35,7 +36,7 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " activee";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+};
 
 
   /* Demo purposes only */
@@ -44,5 +45,30 @@ function showSlides() {
       $(this).removeClass("hover");
     }
   );
+
+// check box
+$(document).ready(function() {
+  // Activate tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Select/Deselect checkboxes
+  var checkbox = $('table tbody input[type="checkbox"]');
+  $("#selectAll").click(function() {
+    if (this.checked) {
+      checkbox.each(function() {
+        this.checked = true;
+      });
+    } else {
+      checkbox.each(function() {
+        this.checked = false;
+      });
+    }
+  });
+  checkbox.click(function() {
+    if (!this.checked) {
+      $("#selectAll").prop("checked", false);
+    }
+  });
+});
 
 

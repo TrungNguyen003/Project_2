@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Convergence&family=Josefin+Sans&display=swap');
 
+html{
+  cursor: url(Dog.png), auto ; 
+}
+button{
+  cursor: url(Dog1.png), auto ; 
+}
+input{
+  cursor: url(Dog1.png), auto ; 
+}
+a{
+  cursor: url(Dog1.png), auto ; 
+}
 body {
     font-family: 'Convergence', cursive ;
 	  background-size: 400% 400%;
@@ -14,6 +26,27 @@ body {
     z-index: 3;
     background-color: #ffff;
   }
+  .header .searchh{
+    text-align: center;   
+ }
+ .search[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+ .searchh button{
+    height: 30px;
+    border-radius: 10px;
+  }
+ 
 
   .menu{
     display: flex;
@@ -40,6 +73,8 @@ body {
     font-size: 2em;
     padding: 10px 20px;
     text-decoration: none;
+    font-size: 50px;
+    text-shadow: 0 0 20px #ee5d94;
   }
   
   
@@ -85,6 +120,7 @@ nav:after {
 nav ul li {
   margin: 0px;
   display: inline-block;
+  font-size: 18px;
 
 }
 
@@ -103,9 +139,11 @@ ul li.active a{
 }
 
 nav ul ul {
-  display: none;
+ display: none;
+  width: 200px;
   position: absolute;
   top: 60px;
+  background-color: #f2f2f2;
 }
 
 nav ul li:hover > ul { display: inherit; }
@@ -138,6 +176,7 @@ li > a:only-child:after { content: ''; }
   width: 100%;
   text-align: center;
   float: none;
+  font-size: 24px;
 }
 
 nav { margin: 0; }
@@ -148,7 +187,6 @@ nav { margin: 0; }
 .toggle {
   display: block;
   padding: 0 20px;
-  color: #000000;
   font-size: 22px;
   font-weight:bold;
   line-height: 60px;
@@ -156,7 +194,7 @@ nav { margin: 0; }
   border: none;
 }
 
-.toggle:hover { background-color: #000000; }
+.toggle:hover { background-color: #f2f2f2 }
 
 [id^=drop]:checked + ul { display: block; }
 
@@ -171,10 +209,9 @@ nav ul ul .toggle,
 nav ul ul ul a { padding: 0 80px; }
 
 nav a:hover,
- nav ul ul ul a { background-color: #000000; }
+ nav ul ul ul a { background-color: #f2f2f2; }
 
-nav ul li ul li .toggle,
- nav ul ul a { background-color: #212121; }
+
 
 nav ul ul {
   float: none;
@@ -252,9 +289,6 @@ nav ul ul ul li { position: static;
   .text {font-size: 11px}
 }
 
-
-
-
 /*  */
 @media all and (max-width : 330px) {
 
@@ -270,7 +304,7 @@ nav ul li {
       float: left;
     }
     .header li a {
-      padding: 20px 30px;
+      padding: 20px 20px;
     }
     .header .menu {
       clear: none;
@@ -289,5 +323,3 @@ nav ul li {
       bottom: 100%;
     }
   } 
-
-
