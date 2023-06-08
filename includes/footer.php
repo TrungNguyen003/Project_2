@@ -12,32 +12,21 @@
   	 <div class="container">
   	 	<div class="roww">
   	 		<div class="footer-col">
-  	 			<h4>company</h4>
+  	 			<h4>Liên Lạc</h4>
   	 			<ul>
-  	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">our services</a></li>
-  	 				<li><a href="#">privacy policy</a></li>
-  	 				<li><a href="#">affiliate program</a></li>
+  	 				<li><a href="#"><i class="fa-solid fa-location-dot"></i>&nbsp; Địa chỉ: 18 Tam Trinh, Hai Bà Trưng, Hà Nội</a></li>
+  	 				<li><a href="#"><i class="fa-solid fa-phone"></i>&nbsp;Điên thoại: 091234568</a></li>
+  	 				<li><a href="#"><i class="fa-solid fa-envelope"></i>&nbsp;Email: shoppet@gmail.com</a></li>
+  	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>get help</h4>
-  	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li>
-  	 				<li><a href="#">payment options</a></li>
-  	 			</ul>
+  	 			<h4>Facebook</h4>
+  	 		
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>online shop</h4>
-  	 			<ul>
-  	 				<li><a href="#">watch</a></li>
-  	 				<li><a href="#">bag</a></li>
-  	 				<li><a href="#">shoes</a></li>
-  	 				<li><a href="#">dress</a></li>
-  	 			</ul>
+  	 			<h4>Intagram</h4>
+  	 			
   	 		</div>
   	 		<div class="footer-col">
   	 			<h4>follow us</h4>
