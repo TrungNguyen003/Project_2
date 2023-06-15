@@ -5,7 +5,7 @@
         $anhsp = $_SESSION['anhsp'];
         $idsp = intval($_GET['idsp']);
         $gia = $_SESSION['gia'];
-        $trangthaii = 0;
+        $trangthaii = 3;
         $sql = "INSERT INTO  duyetdon(idnguoidung,idSP,HinhSP,soluong,Gia,trangthai) VALUES(:sid,:idsp,:anhsp,:quantity,:gia,:trangthaii);";
         $query = $dbh->prepare($sql);
         $query->bindParam(':sid', $sid, PDO::PARAM_STR);

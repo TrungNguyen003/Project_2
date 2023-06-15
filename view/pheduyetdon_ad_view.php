@@ -15,6 +15,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <title>🐶 Shop Pets</title>
         <link href="../admin/assets/css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -68,12 +69,16 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                                                 echo htmlentities("Đã xác nhận");
                                                                             } else if($result->trangthai == 2){
                                                                                 echo htmlentities("Đã hoàn thành");
+                                                                            }else if($result->trangthai == 3){
+                                                                                echo htmlentities("Đang trong giỏ");
+                                                                            }else if($result->trangthai == 4){
+                                                                                echo htmlentities("Đang giao hàng");
                                                                             }else{
                                                                                 echo htmlentities("Yêu cầu đặt hàng");
                                                                             }
                                                                             ?></td>
                                                         <td class="center">
-                                                            <a href="duyetdon_ad_view.php?id=<?php echo htmlentities($result->id); ?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Xem/Phê Duyệt</button>
+                                                            <a href="duyetdon_ad_view.php?id=<?php echo htmlentities($result->id); ?>"><button class="btn btn-success"><i class="fa fa-edit "></i> Xem/Phê Duyệt</button>
                                                         </td>
                                                     </tr>
                                             <?php $cnt = $cnt + 1;

@@ -14,7 +14,7 @@ if (isset($_POST['update'])) {
     $query->bindParam(':Gia', $Gia, PDO::PARAM_STR);
     $query->bindParam(':idsp', $idsp, PDO::PARAM_STR);
     $query->execute();
-    echo "<script>alert('Đã cập nhật thông tin sách thành công');</script>";
+    echo "<script>alert('Đã cập nhật thông tin sản phẩm thành công');</script>";
     echo "<script>window.location.href='../view/quanlyhanghoa_ad_view.php'</script>";
 }
 ?>

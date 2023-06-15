@@ -15,7 +15,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title></title>
+        <title>🐶 Shop Pets</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link href="../admin/assets/css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -60,7 +60,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 foreach ($results as $result) {               ?>
                                                     <div class="col-md-4" style="float:left">                                                            
                                                         <figure class="snip1205"> 
-                                                        <img src="../admin/img/<?php echo htmlentities($result->HinhSP); ?>" width="150"><br>                                                                                                                                                                                                               
+                                                        <img src="../admin/img/<?php echo htmlentities($result->HinhSP); ?>" width="150" height="150"><br>                                                                                                                                                                                                               
                                                             <input type="checkbox" name="orderId[]" value="<?php echo ($result->idsp); ?>">  
                                                             <input type="number" name="quantity" min="1" max="9" step="1" value="1">                                                                                                
                                                             <br /><b><?php echo htmlentities($result->TenSP); ?></b><br />

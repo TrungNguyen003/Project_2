@@ -31,14 +31,14 @@ if (strlen($_SESSION['alogin']) == 0) {
             <div class="container">
                 <div class="row pad-botm">
                     <div class="col-md-12">
-                        <h4 class="header-line">Quản lý sách</h4>
+                        <h4 class="header-line">Quản hàng hóa</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-11">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                            Danh sách sách
+                            Danh hàng hóa
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
@@ -46,11 +46,11 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Tên sách</th>
-                                                <th>Loại</th>
-                                                <th>Tác giả</th>
-                                                <th>Mã Sách</th>
-                                                <th>Giá Mượn</th>
+                                                <th>Tên sản phẩm</th>
+                                                <th>Thể Loại</th>
+                                                <th>Phân loại</th>
+                                                <th>Mã sản phẩm</th>
+                                                <th>Giá</th>
                                                 <th>Chỉnh Sửa</th>
                                             </tr>
                                         </thead>

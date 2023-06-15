@@ -25,7 +25,7 @@ include('model/xulydangki.php');
     </script>
 </head>
 <body>
-   
+   <!-- form logout -->
     <div class="content-wrapper">
         <div class="container">
             <div class="row pad-botm">

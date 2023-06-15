@@ -13,7 +13,7 @@ if (strlen($_SESSION['login']) == 0) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title></title>
+        <title>🐶 Shop Pets</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link href="../assets/css/bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -60,7 +60,6 @@ if (strlen($_SESSION['login']) == 0) {
                                     <!-- <th>Ngày thêm</th> -->
                                     <td>Số lượng</td>
                                     <td>Giá</td>
-                                    <td>Trạng Thái</td>
                                     <td>Ngày đặt</td>
                                     <td>Địa chỉ</td>
                                 </tr>
@@ -80,16 +79,8 @@ if (strlen($_SESSION['login']) == 0) {
                                             <td class="center"><?php echo htmlentities($result->MaSP); ?></td>
 
                                             <td class="center"><?php echo htmlentities($result->SoLuong); ?></td>
-                                            <td class="center"><?php echo htmlentities($result->thanhtien); ?></td>
-                                            <td class="center"><?php if ($result->trangthai == 0) {
-                                                                    echo htmlentities("Chờ thanh toán");
-                                                                } else if ($result->trangthai == 1) {
-                                                                    echo htmlentities("Đã đặt hàng/chờ xác nhận");
-                                                                } else {
-                                                                    echo htmlentities("Đơn đã hoàn thành");
-                                                                }
-                                                                ?></td>
-                                            <td class="center"><?php echo htmlentities($result->ngaymuon); ?></td>
+                                            <td class="center"><?php echo htmlentities($result->thanhtien); ?><sup>đ</sup></td>                                 
+                                            <td class="center"><?php echo htmlentities($result->NgayDat); ?></td>
                                             <td class="center"><?php echo htmlentities($result->diachi); ?></td>
 
 
@@ -100,7 +91,7 @@ if (strlen($_SESSION['login']) == 0) {
                               
                                 <tr>
                                     <td colspan="3" align="center">
-                                        <?php if ($result->trangthai == 0) { ?>
+                                        <?php if ($result->trangthai == 3) { ?>
                                         <button type="submit" name="order" class="btn btn-info" data-toggle="modal"> <span>Đặt hàng</span></button>
                                         <button type="submit" name="delete" class="btn btn-danger" data-toggle="modal"> <span>Xóa</span></button>
                                         <?php } else { ?>
@@ -109,7 +100,7 @@ if (strlen($_SESSION['login']) == 0) {
                                     </td>
                                     <td colspan="7" align="center"> <?php
                                                                     $sid = $_SESSION['id'];
-                                                                    $sql = "SELECT SUM(duyetdon.Gia*duyetdon.SoLuong) as tong FROM duyetdon WHERE duyetdon.IDNguoiDung=:sid and duyetdon.trangthai=0";
+                                                                    $sql = "SELECT SUM(duyetdon.Gia*duyetdon.SoLuong) as tong FROM duyetdon WHERE duyetdon.IDNguoiDung=:sid and duyetdon.trangthai=3";
                                                                     $query = $dbh->prepare($sql);
                                                                     $query->bindParam(':sid', $sid, PDO::PARAM_STR);
                                                                     $query->execute();
@@ -117,7 +108,7 @@ if (strlen($_SESSION['login']) == 0) {
                                                                     if ($query->rowCount() > 0) {
                                                                         foreach ($results as $result) { ?>
                                                 <?php if ($result->trangthai == 0) { ?>
-                                                    <?php echo ("<h3>Tổng Tiền: &nbsp;  "); ?> <?php echo htmlentities($result->tong); ?> <?php echo ("</h3>") ?>
+                                                    <?php echo ("<h3>Tổng Tiền: &nbsp;  "); ?> <?php echo htmlentities($result->tong); ?> <sup>đ</sup><?php echo ("</h3>") ?>
                                                 <?php } else { ?>
                                                     <?php echo ("<h3>Tổng Tiền: 0&nbsp;  "); ?>
                                                 <?php } ?>

@@ -13,6 +13,7 @@ if (strlen($_SESSION['login']) == 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐶 Shop Pets</title>
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/script/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
@@ -83,16 +84,16 @@ if (strlen($_SESSION['login']) == 0) {
                           <a class="mua" href="trangchitiet_view.php?idsp=<?php echo htmlentities($result->idsp); ?>">Mua</a>
                           <br /><b><?php echo htmlentities($result->TenSP); ?></b><br />
                           <?php echo htmlentities($result->TenTheLoai); ?><br />
-                          <?php echo htmlentities($result->GiaSach); ?><br />
+                          <?php echo htmlentities($result->GiaSP); ?><br />
                         </figure>
                       </div>
                   <?php $cnt = $cnt + 1;
                     }
                   } ?>
-
+                <h2  align="center">Hiện chưa có dịch vụ nào</h2>
                 </div>
                 <div class="view-more">
-                  <button class="button-view"><a href="#">Xem Thêm</a></button>
+                
                 </div>
               </div>
             </div>

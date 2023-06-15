@@ -13,6 +13,7 @@ if (strlen($_SESSION['login']) == 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐶 Shop Pets</title>
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/script/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
@@ -58,7 +59,7 @@ if (strlen($_SESSION['login']) == 0) {
       </div>
     </div>
     <div class="swiper-container">
-        <h2>Sản phẩm trưng bầy</h2>
+        <h2>SẢN PHẨM TRƯNG BÀY</h2>
         <div class="linee">
       </div>
         <div class="swiper-wrapper">

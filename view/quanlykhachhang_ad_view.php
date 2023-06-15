@@ -14,6 +14,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <title>🐶 Shop Pets</title>
     <link href="../admin/assets/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -28,7 +29,7 @@ if (strlen($_SESSION['alogin']) == 0) {
       <div class="container">
         <div class="row pad-botm">
           <div class="col-md-12">
-            <h4 class="header-line">Manage Reg Students</h4>
+            <h4 class="header-line">Quản lý khách hàng</h4>
           </div>
 
 
@@ -38,7 +39,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             <!-- Advanced Tables -->
             <div class="panel panel-default">
               <div class="panel-heading">
-                Reg Students
+                Danh sách khách hàng
               </div>
               <div class="panel-body">
                 <div class="table-responsive">

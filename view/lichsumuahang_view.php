@@ -12,7 +12,7 @@ if (strlen($_SESSION['login']) == 0) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title></title>
+        <title>🐶 Shop Pets</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link href="../assets/css/bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,7 +39,7 @@ if (strlen($_SESSION['login']) == 0) {
                     <div class="table-title">
                         <div class="row">
                             <div class="col-md-15">
-                                <h4 class="header-line">Quản lý giỏ hàng</h4>
+                                <h4 class="header-line">Lịch sử mua hàng</h4>
                             </div>
 
                         </div>
@@ -68,7 +68,7 @@ if (strlen($_SESSION['login']) == 0) {
                                         <tr class="odd gradeX">
                                             <td class="center"><?php echo htmlentities($cnt); ?></td>                                           
                                             <td class="center"><img src="../admin/img/<?php echo htmlentities($result->HinhSP); ?>" width="100"><br><?php echo htmlentities($result->TenSP); ?></td>
-                                            <td class="center"><?php echo htmlentities($result->MaSach); ?></td>
+                                            <td class="center"><?php echo htmlentities($result->MaSP); ?></td>
 
                                             <td class="center"><?php echo htmlentities($result->SoLuong); ?></td>
                                             <td class="center"><?php echo htmlentities($result->thanhtien); ?></td>

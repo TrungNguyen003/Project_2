@@ -72,9 +72,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                         $query = $dbh->prepare($sql);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ); //Chỉ định rằng phương thức tìm nạp sẽ trả về mỗi hàng dưới dạng một đối tượng có tên thuộc tính tương ứng với tên cột được trả về trong tập hợp kết quả.
-                        $allsach = $query->rowCount();
+                        $allsp = $query->rowCount();
                         ?>
-              <?php echo htmlentities($allsach); ?></h2>
+              <?php echo htmlentities($allsp); ?></h2>
 
           </div>
 

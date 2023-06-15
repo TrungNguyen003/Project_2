@@ -14,6 +14,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🐶 Shop Pets</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
         <link href="../admin/assets/css/bootstrap.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -119,7 +120,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Mã sách<span style="color:red;">*</span></label>
+                                                <label>Mã sản phảm<span style="color:red;">*</span></label>
                                                 <input class="form-control" type="text" name="masp" id="masp" required="required" autocomplete="off" onBlur="checkmasp()" />
                                                 <p class="help-block">Mã sản phẩm phải là duy nhất</p>
                                                 <span id="masp" style="font-size:12px;"></span>

@@ -30,7 +30,7 @@ if (isset($_POST['add'])) {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            echo "<script>alert('Thêm sách thành công');</script>";
+            echo "<script>alert('Thêm sản phẩm thành công');</script>";
             echo "<script>window.location.href='../view/quanlyhanghoa_ad_view.php'</script>";
         } else {
             echo "<script>alert('Đã xảy ra sự cố. Vui lòng thử lại');</script>";

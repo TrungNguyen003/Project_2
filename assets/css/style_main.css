@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Convergence&family=Josefin+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Cherry+Bomb+One&family=Sigmar&display=swap');
 body {
-    font-family: 'Convergence', cursive ;
+    font-family: 'Calistoga', cursive ;
   } 
   
 .main-content{
   width: 100%;
   height: auto;
 }
-
+ 
 #banner{
   width: 100%;
   height: 650px;
@@ -27,7 +26,6 @@ body {
 }
 
 #banner .box-left h2 {
-    font-family: 'Galindo';
     color: #ee5d94;
     font-size: 30px;
 }
